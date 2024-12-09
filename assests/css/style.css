@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Layout */
+body {
+    font-family: Georgia, serif;
+    background-color: white;
+    color: black;
+}
+
+h1, h3, h4 {
+    font-family: 'Bungee', sans-serif;
+    color: #85A9EF;
+}
+
+a {
+    text-decoration: none;
+    color: #85A9EF;
+}
+
+a:hover {
+    color: #AA3939;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+
+.header-container {
+    text-align: left;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/* Navigation */
+nav {
+    background-color: #FFFBDB;
+    width: 100%;
+    height: 100px;
+    padding: 0 10px; /* Adds 10px space on the left and right */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between; /* Spread items across the full width */
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    font-size: 2em;
+    margin: 0 10px;
+    word-spacing: 20px;
+}
+
+nav a {
+    font-family: 'Bungee', sans-serif;
+    color: #85A9EF;
+}
+
+nav a:hover {
+    color: #AA3939;
+}
+
+/* Main Content */
+main {
+    margin-top: 0; /* Remove the top margin so it starts directly after navigation */
+}
+
+.blog-entry, .reading-entry {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0; /* Remove margins to ensure sections touch */
+    padding: 50px 200px 50px;
+    
+}
+
+.blog-entry .text, .reading-entry .text {
+    width: 50%; /* Paragraphs take up 50% of the container */
+}
+
+.blog-entry h3, .reading-entry h3 {
+    font-family: 'Bungee', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px; /* Space between heading and paragraph */
+}
+
+.blog-entry p, .reading-entry p {
+    font-size: 13.5pt;
+    line-height: 1.6;
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.blog-entry img, .reading-entry img {
+    width: 300px;
+    margin-left: 100px; /* 100px space between paragraph and image */
+    margin-top: 20px; /* Space between paragraph and image */
+}
+
+/* Background Colors for Sections */
+#lastweek {
+    background-color: #FFEC8A;
+}
+
+#november {
+    background-color: #FFF1A9;
+}
+
+#current {
+    background-color: #FFEC8A;
+}
+
+#lastread {
+    background-color: #FFF1A9;
+}
+
+/* Footer */
+footer {
+    background-color: #FFFBDB;
+    color: black;
+    text-align: center;
+    height: 100px;
+    padding-top: 25px;
+}
+
+footer a {
+    font-family: 'Bungee', sans-serif;
+    color:#85A9EF;
+    font-size: 2.5em;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    .blog-entry, .reading-entry {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blog-entry .text, .reading-entry .text {
+        width: 80%; /* Paragraphs take up 80% width on smaller screens */
+    }
+
+    .blog-entry img, .reading-entry img {
+        width: 230px;
+        margin-top: 20px;
+        margin-left: 0; /* Reset margin when stacking */
+    }
+}
